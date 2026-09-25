@@ -8,6 +8,6 @@ COPY runnables/package.json runnables/package-lock.json ./
 RUN npm ci --omit=dev --ignore-scripts \
     && npm cache clean --force
 
-COPY src/starter-player.mjs src/coworld-url.mjs src/proxywar-optimizer-plan.mjs ./src/
+COPY src/starter-player.mjs src/jev-player.mjs src/coworld-url.mjs src/proxywar-optimizer-plan.mjs ./src/
 
 CMD ["node", "/app/integration/src/starter-player.mjs"]
